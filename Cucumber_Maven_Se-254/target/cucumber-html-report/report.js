@@ -129,35 +129,35 @@ formatter.match({
   "location": "SmokeTest.open_Chrome_and_launch_Facebook()"
 });
 formatter.result({
-  "duration": 53006267615,
+  "duration": 13445930557,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.user_Enter_valid_UserName_and_Password()"
 });
 formatter.result({
-  "duration": 721004139,
+  "duration": 265843955,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.click_login_button()"
 });
 formatter.result({
-  "duration": 4972128615,
+  "duration": 4558913167,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.user_should_login_successfully()"
 });
 formatter.result({
-  "duration": 36121557,
+  "duration": 8715135,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.close_Browser()"
 });
 formatter.result({
-  "duration": 762101503,
+  "duration": 2135574313,
   "status": "passed"
 });
 formatter.scenario({
@@ -203,7 +203,7 @@ formatter.match({
   "location": "SmokeTest.open_Chrome_and_launch_Facebook()"
 });
 formatter.result({
-  "duration": 9530166297,
+  "duration": 8475741663,
   "status": "passed"
 });
 formatter.match({
@@ -220,28 +220,28 @@ formatter.match({
   "location": "SmokeTest.user_Enter_valid_and(String,String)"
 });
 formatter.result({
-  "duration": 252115085,
+  "duration": 268770270,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.click_login_button()"
 });
 formatter.result({
-  "duration": 32547223972,
+  "duration": 32593980306,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.user_should_login_successfully()"
 });
 formatter.result({
-  "duration": 193027000,
+  "duration": 15354451,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.close_Browser()"
 });
 formatter.result({
-  "duration": 2473388296,
+  "duration": 153167453,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -367,7 +367,7 @@ formatter.match({
   "location": "SmokeTest.open_Chrome_and_launch_Facebook()"
 });
 formatter.result({
-  "duration": 12463313081,
+  "duration": 11525139622,
   "status": "passed"
 });
 formatter.match({
@@ -384,28 +384,28 @@ formatter.match({
   "location": "SmokeTest.user_Enter_valid_and(String,String)"
 });
 formatter.result({
-  "duration": 815232989,
+  "duration": 240660603,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.click_login_button()"
 });
 formatter.result({
-  "duration": 4186869156,
+  "duration": 4188436283,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.user_should_login_successfully()"
 });
 formatter.result({
-  "duration": 17776983,
+  "duration": 8030632,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.close_Browser()"
 });
 formatter.result({
-  "duration": 2319933923,
+  "duration": 2330253667,
   "status": "passed"
 });
 formatter.scenario({
@@ -459,7 +459,7 @@ formatter.match({
   "location": "SmokeTest.open_Chrome_and_launch_Facebook()"
 });
 formatter.result({
-  "duration": 9934415835,
+  "duration": 8121631703,
   "status": "passed"
 });
 formatter.match({
@@ -476,28 +476,28 @@ formatter.match({
   "location": "SmokeTest.user_Enter_valid_and(String,String)"
 });
 formatter.result({
-  "duration": 280417074,
+  "duration": 237224258,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.click_login_button()"
 });
 formatter.result({
-  "duration": 3648036808,
+  "duration": 3458290868,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.user_should_login_successfully()"
 });
 formatter.result({
-  "duration": 7439389,
+  "duration": 15653418,
   "status": "passed"
 });
 formatter.match({
   "location": "SmokeTest.close_Browser()"
 });
 formatter.result({
-  "duration": 2326864622,
+  "duration": 2331118443,
   "status": "passed"
 });
 });

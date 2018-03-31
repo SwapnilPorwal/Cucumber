@@ -9,6 +9,6 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = "Features", glue =
 { "stepDefinition" }, plugin =
 { "html:target/cucumber-html-report" })
-public class TestRunner1
+public class TestRunner
 {
 }
