@@ -1,4 +1,4 @@
-package stepDefinitions;
+/*package stepDefinitions;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -38,7 +38,7 @@ public class Steps
 		//configFileReader = new ConfigFileReader();
 		//System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 		//System.setProperty("webdriver.chrome.driver", configFileReader.getDriverPath());
-		/**System.setProperty("webdriver.chrome.driver", FileReaderManager.getInstance().getConfigReader().getDriverPath());
+		*//**System.setProperty("webdriver.chrome.driver", FileReaderManager.getInstance().getConfigReader().getDriverPath());
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait(), TimeUnit.SECONDS);
@@ -46,7 +46,7 @@ public class Steps
 		pageObjectManager = new PageObjectManager(driver);
 		homePage = pageObjectManager.getHomePage();
 		homePage.navigateTo_HomePage();	
-		**/
+		**//*
 		webDriverManager = new WebDriverManager();
 		driver = webDriverManager.getDriver();
 		pageObjectManager = new PageObjectManager(driver);
@@ -124,3 +124,4 @@ public class Steps
 	}
 	
 }
+*/
