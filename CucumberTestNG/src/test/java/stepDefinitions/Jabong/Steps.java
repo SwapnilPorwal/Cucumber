@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.Jabong;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,40 +20,36 @@ public class Steps
 	public  WebDriver driver = BrowserFactory.getBrowser("IE");
 	private  Logger oLog = LoggerHelper.getLogger(Steps.class);
 	
-	@Given("^User Navigated to Facebook$")
-	public void user_Navigated_to_Facebook() throws Throwable {
+	@Given("^User Navigated to Jabong$")
+	public void user_Navigated_to_Jabong() throws Throwable 
+	{
 	    // Write code here that turns the phrase above into concrete actions
-	    //System.setProperty("webdriver.ie.driver", "./src/main/resources/drivers/IEDriverServer.exe");
-	    //driver=new InternetExplorerDriver();
-		//driver = BrowserFactory.getBrowser("IE");
 	    driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	    driver.get("https://www.facebook.com/");
-	    oLog.info("User navigated to 'facebook.com'");
+	    driver.get("https://www.jabong.com/");
+	    oLog.info("User navigated to 'Jabong.com'");
 	}
 
-	@When("^User enter Username as \"([^\"]*)\" and Password as \"([^\"]*)\"$")
-	public void user_enter_Username_as_and_Password_as(String UserName, String Password) throws Throwable {
+	@When("^Enter UserName as \"([^\"]*)\" and Password as \"([^\"]*)\" for login to Jabong$")
+	public void enter_UserName_as_and_Password_as_for_login_to_Jabong(String UserName, String Password) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		
 	    driver.findElement(By.xpath("//input[@id='email']")).sendKeys(UserName);
 	    oLog.info("UserName enetered ...");
 	    driver.findElement(By.xpath("//input[@id='pass']")).sendKeys(Password);
 	    oLog.info("Password entered...");
-	    
 	}
 
-	@When("^Clcik on Login button$")
-	public void clcik_on_Login_button() throws Throwable {
+	@When("^Click on Login button for Jabong$")
+	public void click_on_Login_button_for_Jabong() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    driver.findElement(By.xpath("//input[@type='submit']")).click();
-	    oLog.info("Login button clicked");
+	    throw new PendingException();
 	}
 
-	@Then("^User should be not ne logged In$")
-	public void user_should_be_not_ne_logged_In() throws Throwable {
+	@Then("^User should be able to Jabong$")
+	public void user_should_be_able_to_Jabong() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    driver.findElement(By.xpath("//a[text()='Recover Your Account']"));
-	    oLog.info("User not Logged in Successfully");
+	    throw new PendingException();
 	}
 
 }

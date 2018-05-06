@@ -4,6 +4,7 @@
   <test name="Test-1">
   <classes>
   <class name="runners.Facebook_TestRunner"></class>
+  <class name="runners.AutomationPractice_TestRunner"></class>
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
