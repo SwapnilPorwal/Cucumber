@@ -11,7 +11,7 @@
       <class name="runners.Facebook_TestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="0"/>
+          <include name="feature"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- runners.Facebook_TestRunner -->
