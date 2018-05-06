@@ -48,8 +48,16 @@ public class WaitHelper
 	
 	public void waitForElement(WebDriver driver, WebElement element, long timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, timeout);
-		wait.until(ExpectedConditions.visibilityOf(element));
-		Log.info("element found..."+element.getText());
+		try
+		{
+			wait.until(ExpectedConditions.visibilityOf(element));
+			Log.info("element found..."+element.getText());
+		}
+		catch(Exception e)
+		{
+			Log.error("element found...");
+		}
+
 	}
 	
 	public WebElement waitForElement(WebDriver driver,long time,WebElement element){

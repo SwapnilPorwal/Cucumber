@@ -1,15 +1,18 @@
 package stepDefinitions.AutomationPractice;
 
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
-import automationpractice.LoginPage_AutomationPractice;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pageObjects_automationpractice.HomePage_AutomationPractice;
+import pageObjects_automationpractice.LoginPage_AutomationPractice;
 import utility.BrowserFactory;
 import utility.LoggerHelper;
 
@@ -18,7 +21,10 @@ public class Steps
 	public  WebDriver driver = BrowserFactory.getBrowser("IE");
 	private  Logger oLog = LoggerHelper.getLogger(Steps.class);
 	
+	HomePage_AutomationPractice home;
 	LoginPage_AutomationPractice login ;
+	
+	public static HashMap<String,String> ordeCountMap = new HashMap<String , String>();
 	
 	@Given("^User navigated to AutomationPractice$")
 	public void user_navigated_to_AutomationPractice() throws Throwable {
@@ -33,13 +39,16 @@ public class Steps
 	@Given("^User Click on Sign in link$")
 	public void user_Click_on_Sign_in_link() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		login = new LoginPage_AutomationPractice(driver);
-		login.clickOnSignInLink();
+		//login = new LoginPage_AutomationPractice(driver);
+		//login.clickOnSignInLink();
+		home = new HomePage_AutomationPractice(driver);
+		home.clickOnSignInLink();
 	}
 
 	@When("^User Enter UserName as \"([^\"]*)\" and Password as \"([^\"]*)\" for login to AuomationPractice$")
 	public void user_Enter_UserName_as_and_Password_as_for_login_to_AuomationPractice(String arg1, String arg2) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		login = new LoginPage_AutomationPractice(driver);
 	    login.enterEmailAddress(arg1);
 	    login.enterPassword(arg2);
 	}
@@ -60,7 +69,7 @@ public class Steps
 		else
 		{
 			oLog.error("User NotLogged successfully");
-			
+			Assert.fail();
 		}
 	    
 	}

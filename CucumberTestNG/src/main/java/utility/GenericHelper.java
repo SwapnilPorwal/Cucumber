@@ -1,5 +1,7 @@
 package utility;
 
+import java.io.IOException;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 
@@ -32,7 +34,7 @@ public class GenericHelper
 	}
 	
 
-	public String readValueFromInput(WebElement element) {
+	public String readValueFromInput(WebElement element) throws IOException {
 		if (null == element)
 			return null;
 		if (!isDisplayed(element))
@@ -42,13 +44,14 @@ public class GenericHelper
 		return value;
 	}
 	
-	public boolean isDisplayed(WebElement element) {
+	public boolean isDisplayed(WebElement element) throws IOException {
 		try {
 			element.isDisplayed();
 			log.info("element is displayed.."+element);
 			return true;
 		} catch (Exception e) {
-			log.info(e);
+			log.info("element not found");
+			ScreenshotHelper.getScreenShot("ElementNotFound");
 			return false;
 		}
 	}
@@ -64,7 +67,7 @@ public class GenericHelper
 		}
 	}
 	
-	protected String getDisplayText(WebElement element) {
+	protected String getDisplayText(WebElement element) throws IOException {
 		if (null == element)
 			return null;
 		if (!isDisplayed(element))

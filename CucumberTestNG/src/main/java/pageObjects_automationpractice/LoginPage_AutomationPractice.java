@@ -1,4 +1,6 @@
-package automationpractice;
+package pageObjects_automationpractice;
+
+import java.io.IOException;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -6,8 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
-
+import utility.GenericHelper;
 import utility.LoggerHelper;
 import utility.WaitHelper;
 
@@ -31,8 +32,11 @@ public class LoginPage_AutomationPractice
 	@FindBy(xpath="//button[@id='SubmitLogin']")
 	WebElement submitLogin;
 	
-	@FindBy(xpath="//span[text()='Swapnil Porwal']")
+	@FindBy(xpath="//span[text()='Swapnil Porwa']")
 	WebElement successMsgObject;
+	
+	@FindBy(xpath="//span[text()=' Home']")
+	WebElement homeButton;
 	
 	
 	public LoginPage_AutomationPractice(WebDriver driver)
@@ -40,7 +44,7 @@ public class LoginPage_AutomationPractice
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
-		waitHelper.waitForElement(driver, SignIn,20);
+		waitHelper.waitForElement(driver, emailAddress,20);
 	}
 	
 	public void clickOnSignInLink(){
@@ -64,7 +68,13 @@ public class LoginPage_AutomationPractice
 
 	}
 	
-	public boolean verifySuccessLoginMsg(){
-		return new utility.GenericHelper().isDisplayed(successMsgObject);
+	public boolean verifySuccessLoginMsg() throws IOException{
+		return new GenericHelper().isDisplayed(successMsgObject);
+	}
+	
+	public HomePage_AutomationPractice clickOnHome() 
+	{
+		homeButton.click();
+		return new HomePage_AutomationPractice(driver);
 	}
 }
